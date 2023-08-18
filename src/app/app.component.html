@@ -1,0 +1,21 @@
+<div class="min-h-screen min-w-full bg-slate-200">
+  <section class="text-gray-400 bg-gray-900 body-font">
+    <div
+      class="flex justify-around items-center bg-blue-500 text-white dark:bg-slate-900 p-5 font-semibold text-lg shadow-lg">
+      <h1 class="text-lg">NgTailwind-App</h1>
+      <h1 class=""> Home </h1>
+      <button class="flex transition-transform hover:scale-150 align-middle" (click)="darkMode.set(!darkMode())">
+        <span *ngIf="!darkMode()" class="material-icons">light_mode</span>
+        <span *ngIf="darkMode()" class="material-icons">dark_mode</span>
+      </button>
+    </div>
+
+    <div class="container px-5 py-24 mx-auto">
+      <div class="lg:w-2/3 flex flex-col sm:flex-row sm:items-center items-start mx-auto">
+        <h1 class="flex-grow sm:pr-16 text-2xl font-medium title-font text-white">{{ title }}</h1>
+        <app-my-btn title="Custom Button"></app-my-btn>
+      </div>
+    </div>
+  </section>
+  <router-outlet></router-outlet>
+</div>
